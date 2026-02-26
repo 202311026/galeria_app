@@ -1,0 +1,78 @@
+========================================
+   INSTRUCCIONES DE EJECUCIÓN
+   Proyecto: Galería App
+   Framework: Flutter (Dart)
+========================================
+
+REQUISITOS PREVIOS
+------------------
+- Flutter SDK instalado (https://flutter.dev)
+- VS Code con extensiones Flutter y Dart
+- Android SDK instalado
+- Dispositivo Android con Depuración USB activada
+  O emulador Android configurado
+
+PASOS PARA ACTIVAR DEPURACIÓN USB
+----------------------------------
+1. Ir a Ajustes del celular
+2. Buscar "Acerca del teléfono"
+3. Tocar "Número de compilación" 7 veces
+4. Ir a "Opciones de desarrollador"
+5. Activar "Depuración USB"
+6. Conectar celular a la PC con cable USB
+7. Aceptar el mensaje de confianza en el celular
+
+PASOS DE INSTALACIÓN
+---------------------
+1. Abrir VS Code
+2. Abrir terminal (Ctrl + `)
+3. Navegar al proyecto:
+   cd C:\1ER_DEPARTAMENTAL\galeria_app
+
+4. Instalar dependencias:
+   flutter pub get
+
+5. Verificar dispositivo conectado:
+   flutter devices
+
+6. Ejecutar la app:
+   flutter run
+
+ESTRUCTURA DEL PROYECTO
+------------------------
+galeria_app/
+├── lib/
+│   └── main.dart              (código principal)
+├── android/
+│   └── app/
+│       ├── build.gradle.kts   (configuración Android)
+│       └── src/main/
+│           └── AndroidManifest.xml (permisos)
+├── pubspec.yaml               (dependencias)
+└── test/
+    └── widget_test.dart       (tests)
+
+DEPENDENCIAS UTILIZADAS
+------------------------
+- photo_manager: ^3.0.0
+- permission_handler: ^11.0.0
+
+USO DE LA APP
+--------------
+1. Al abrir la app, aceptar permiso de fotos
+2. Se mostrará el grid con todas las fotos
+3. Tocar una miniatura para ver a pantalla completa
+4. Deslizar izquierda/derecha para cambiar foto
+5. Pellizcar la pantalla para hacer zoom
+6. Tocar flecha atrás para regresar a la galería
+
+SOLUCIÓN A ERRORES COMUNES
+----------------------------
+- Si no compila: verificar minSdk = 21 en build.gradle.kts
+- Si no encuentra dispositivo: revisar cable USB y depuración
+- Si niega permisos: ir a Ajustes del celular > Apps > 
+  Galería App > Permisos > Activar Fotos
+- Si hay error de dependencias: ejecutar flutter clean 
+  y luego flutter pub get
+
+========================================
